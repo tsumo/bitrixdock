@@ -32,6 +32,14 @@ echo "alias dc='docker-compose'" >> ~/.bash_aliases && \
 source ~/.bashrc
 ```
 
+## Генерируем сертификат на localhost
+- С помощью [mkcert](https://github.com/FiloSottile/mkcert) генерируем CA и сертификат
+```
+mkcert -install
+mkcert localhost
+```
+- Получившиеся файлы `localhost.pem` и `localhost-key.pem` ложим в `nginx/certs/`
+
 ### Начало работы
 - Склонируйте репозиторий bitrixdock
 ```

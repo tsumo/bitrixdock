@@ -2,3 +2,4 @@
 /logs
 /data
 .env
+/nginx/certs/*.pem
