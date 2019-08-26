@@ -6,8 +6,8 @@ services:
         container_name: bitrixdock_php
         volumes_from:
             - source
-        ports:
-            - '${INTERFACE}:9000:9000'
+        # ports:
+        #     - '${INTERFACE}:9000:9000'
         links:
             - mysql
             - memcached
