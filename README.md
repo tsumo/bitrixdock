@@ -40,6 +40,22 @@ mkcert localhost
 ```
 - Получившиеся файлы `localhost.pem` и `localhost-key.pem` ложим в `nginx/certs/`
 
+## Настройка дебаггера
+В VS Code настраиваем расширение "PHP Debug" от Felix Becker. Нам нужно настроить только конфигурацию `Listen for XDebug`
+```
+{
+    "name": "Listen for XDebug",
+    "type": "php",
+    "request": "launch",
+    "pathMappings": {
+        "/var/www/bitrix/": "/var/www/bitrix",
+        "/var/www/bitrix/bitrix/modules/": "${workspaceRoot}/",
+    },
+    "port": 9000,
+    "log": true
+}
+```
+
 ### Начало работы
 - Склонируйте репозиторий bitrixdock
 ```
